@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2025 by anonymous (http://jsbin.com/rogevatayu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Pháp Tài Chính Nhanh 24/7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        
+        body { 
+            background-color: var(--bg); 
+            color: var(--text-dark); 
+            line-height: 1.6;
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper { width: 100%; max-width: 480px; }
+
+        .header { text-align: center; padding: 32px 0 24px; }
+        .header h1 { font-size: 24px; font-weight: 800; color: #1e293b; letter-spacing: -0.5px; }
+        .header p { font-size: 14px; color: var(--text-light); margin-top: 6px; }
+
+        /* Card Style */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .brand-text { font-size: 20px; font-weight: 800; text-transform: uppercase; }
+
+        .badge {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 100px;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .info-box {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 12px;
+        }
+
+        .info-box span { font-size: 11px; color: var(--text-light); display: block; text-transform: uppercase; margin-bottom: 2px; }
+        .info-box strong { font-size: 15px; color: var(--text-dark); }
+
+        .feature-list { list-style: none; margin-bottom: 24px; }
+        .feature-list li {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: inherit;
+            font-weight: 900;
+            margin-right: 12px;
+            margin-top: 2px;
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 16px;
+            border-radius: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* FAQ Section */
+        .faq-section { margin-top: 40px; padding-bottom: 40px; }
+        .faq-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; text-align: center; }
+        
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 8px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 16px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            font-size: 13.5px;
+            color: var(--text-light);
+            background: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 16px;
+            max-height: 200px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Brand Colors */
+        .vp-color { color: #009245; } .vp-bg { background-color: #009245; }
+        .lt-color { color: #da291c; } .lt-bg { background-color: #da291c; }
+        .fe-color { color: #4db848; } .fe-bg { background-color: #4db848; }
+
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <h1>Vay Nhanh Uy Tín</h1>
+        <p>Hệ thống duyệt hồ sơ tự động 24/7</p>
+    </header>
+
+    <div class="card">
+        <div class="card-top">
+            <div class="brand-text vp-color">VPBANK</div>
+            <div class="badge" style="background: #e6f4ec; color: #009245;">Duyệt 5 Phút</div>
+        </div>
+        <div class="grid-info">
+            <div class="info-box"><span>Hạn mức</span><strong>Tới 500 Triệu</strong></div>
+            <div class="info-box"><span>Hình thức</span><strong>Vay Tín Chấp</strong></div>
+        </div>
+        <ul class="feature-list">
+            <li>Dành riêng cho khách hàng đăng ký online</li>
+            <li>Không gọi điện thẩm định người thân</li>
+            <li>Giải ngân thẳng vào số tài khoản</li>
+        </ul>
+        <a href="https://go.isclix.com/deep_link/v5/6744095745774424946/6822308958202075636?sub4=oneatweb&url_enc=aHR0cHM6Ly92YXlvbmxpbmUudnBiYW5rLmNvbS52bi8%3D" class="cta-btn vp-bg">Đăng Ký Ngay</a>
+    </div>
+
+    <div class="card">
+        <div class="card-top">
+            <div class="brand-text lt-color">LOTTE Finance</div>
+            <div class="badge" style="background: #fdeaea; color: #da291c;">Lãi Suất Thấp</div>
+        </div>
+        <div class="grid-info">
+            <div class="info-box"><span>Hạn mức</span><strong>10 - 100 Triệu</strong></div>
+            <div class="info-box"><span>Lãi suất</span><strong>1.67%/tháng</strong></div>
+        </div>
+        <ul class="feature-list">
+            <li>Hồ sơ chỉ cần CCCD gắn chip</li>
+            <li>Tặng bảo hiểm khoản vay lên đến 2 triệu</li>
+            <li>Hỗ trợ khách hàng có thu nhập từ lương</li>
+        </ul>
+        <a href="https://go.isclix.com/deep_link/v6/6744095745774424946/6586832341367096506?sub4=oneatweb&utm_source=xsdp&utm_medium=banner&utm_campaign=LotteFinance&url_enc=aHR0cHM6Ly92YXkubG90dGVmaW5hbmNlLnZuL3ZheW5oYW5oMy8%3D" class="cta-btn lt-bg">Nhận Ưu Đãi</a>
+    </div>
+
+    <div class="card">
+        <div class="card-top">
+            <div class="brand-text fe-color">FE CREDIT</div>
+            <div class="badge" style="background: #edf8ee; color: #4db848;">Duyệt Dễ Nhất</div>
+        </div>
+        <div class="grid-info">
+            <div class="info-box"><span>Khoản vay</span><strong>10 - 70 Triệu</strong></div>
+            <div class="info-box"><span>Giải ngân</span><strong>Trong 24 Giờ</strong></div>
+        </div>
+        <ul class="feature-list">
+            <li>Hỗ trợ khách hàng chưa có lịch sử tín dụng</li>
+            <li>Tỷ lệ duyệt hồ sơ lên đến 90%</li>
+            <li>Thanh toán linh hoạt qua ví Momo, Viettel Money</li>
+        </ul>
+        <a href="https://go.isclix.com/deep_link/v5/6744095745774424946/6528872927410958011?sub4=oneatweb&url_enc=aHR0cHM6Ly92YXkuZmVjcmVkaXQuY29tLnZuLw%3D%3D" class="cta-btn fe-bg">Vay Tiền Ngay</a>
+    </div>
+
+    <div class="faq-section">
+        <h2 class="faq-title">Câu hỏi thường gặp</h2>
+        
+        <div class="faq-item">
+            <button class="faq-question">Vay online có mất phí làm hồ sơ không? <span>+</span></button>
+            <div class="faq-answer">Tất cả các nhãn hàng trên đều miễn phí hoàn toàn phí tư vấn và phí làm hồ sơ. Bạn chỉ phải đóng lãi và gốc khi khoản vay đã được giải ngân.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Nợ xấu có đăng ký vay được không? <span>+</span></button>
+            <div class="faq-answer">Nếu bạn có nợ xấu nhóm 1 hoặc nhóm 2 (chậm thanh toán dưới 90 ngày), FE Credit hoặc VPBank vẫn có thể xem xét hỗ trợ dựa trên thu nhập hiện tại.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Bao lâu thì nhận được tiền? <span>+</span></button>
+            <div class="faq-answer">Với VPBank, hệ thống duyệt tự động chỉ mất 5-30 phút. Các công ty tài chính khác thường giải ngân trong vòng 24 giờ làm việc.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+            button.querySelector('span').innerText = faqItem.classList.contains('active') ? '-' : '+';
+        });
+    });
+</script>
+
+</body>
+</html>

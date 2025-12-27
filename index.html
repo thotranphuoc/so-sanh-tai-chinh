@@ -1,19 +1,10 @@
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2025 by anonymous (http://jsbin.com/rogevatayu/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giải Pháp Tài Chính Nhanh 24/7</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Giải Pháp Tài Chính Nhanh 24/7 - So Sánh Vay Uy Tín</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #f8fafc;
@@ -21,6 +12,9 @@ Released under the MIT license: http://jsbin.mit-license.org
             --text-dark: #0f172a;
             --text-light: #64748b;
             --border: #e2e8f0;
+            --vpbank: #009245;
+            --lotte: #da291c;
+            --fe: #4db848;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
@@ -29,18 +23,19 @@ Released under the MIT license: http://jsbin.mit-license.org
             background-color: var(--bg); 
             color: var(--text-dark); 
             line-height: 1.6;
-            padding: 16px;
+            padding: 12px;
             display: flex;
             justify-content: center;
         }
 
         .wrapper { width: 100%; max-width: 480px; }
 
+        /* Header Section */
         .header { text-align: center; padding: 32px 0 24px; }
         .header h1 { font-size: 24px; font-weight: 800; color: #1e293b; letter-spacing: -0.5px; }
         .header p { font-size: 14px; color: var(--text-light); margin-top: 6px; }
 
-        /* Card Style */
+        /* Card Styles */
         .card {
             background: var(--card-bg);
             border-radius: 20px;
@@ -48,6 +43,8 @@ Released under the MIT license: http://jsbin.mit-license.org
             margin-bottom: 20px;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
         }
 
         .card-top {
@@ -109,10 +106,13 @@ Released under the MIT license: http://jsbin.mit-license.org
             font-weight: 700;
             font-size: 16px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, opacity 0.2s;
         }
 
+        .cta-btn:active { transform: scale(0.98); opacity: 0.9; }
+
         /* FAQ Section */
-        .faq-section { margin-top: 40px; padding-bottom: 40px; }
+        .faq-section { margin-top: 20px; }
         .faq-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; text-align: center; }
         
         .faq-item {
@@ -153,10 +153,50 @@ Released under the MIT license: http://jsbin.mit-license.org
             border-top: 1px solid var(--border);
         }
 
-        /* Brand Colors */
-        .vp-color { color: #009245; } .vp-bg { background-color: #009245; }
-        .lt-color { color: #da291c; } .lt-bg { background-color: #da291c; }
-        .fe-color { color: #4db848; } .fe-bg { background-color: #4db848; }
+        /* Footer Section */
+        .footer-legal {
+            margin-top: 40px;
+            padding: 24px 0 48px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .footer-info {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .footer-contact {
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 8px;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            font-size: 10px;
+            font-weight: 700;
+            color: #cbd5e1;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Brand Color Classes */
+        .vp-color { color: var(--vpbank); } .vp-bg { background-color: var(--vpbank); }
+        .lt-color { color: var(--lotte); } .lt-bg { background-color: var(--lotte); }
+        .fe-color { color: var(--fe); } .fe-bg { background-color: var(--fe); }
 
     </style>
 </head>
@@ -171,75 +211,99 @@ Released under the MIT license: http://jsbin.mit-license.org
     <div class="card">
         <div class="card-top">
             <div class="brand-text vp-color">VPBANK</div>
-            <div class="badge" style="background: #e6f4ec; color: #009245;">Duyệt 5 Phút</div>
+            <div class="badge" style="background: #e6f4ec; color: var(--vpbank);">Duyệt Online</div>
         </div>
         <div class="grid-info">
-            <div class="info-box"><span>Hạn mức</span><strong>Tới 500 Triệu</strong></div>
-            <div class="info-box"><span>Hình thức</span><strong>Vay Tín Chấp</strong></div>
+            <div class="info-box"><span>Hạn mức vay</span><strong>Tới 500 Triệu</strong></div>
+            <div class="info-box"><span>Thời gian</span><strong>6 - 60 Tháng</strong></div>
         </div>
         <ul class="feature-list">
-            <li>Dành riêng cho khách hàng đăng ký online</li>
-            <li>Không gọi điện thẩm định người thân</li>
-            <li>Giải ngân thẳng vào số tài khoản</li>
+            <li>Duyệt hồ sơ tự động trong 5 phút</li>
+            <li>Không cần gặp mặt, không gọi người thân</li>
+            <li>Giải ngân trực tiếp vào số tài khoản</li>
         </ul>
-        <a href="https://go.isclix.com/deep_link/v5/6744095745774424946/6822308958202075636?sub4=oneatweb&url_enc=aHR0cHM6Ly92YXlvbmxpbmUudnBiYW5rLmNvbS52bi8%3D" class="cta-btn vp-bg">Đăng Ký Ngay</a>
+        <a href="https://go.isclix.com/deep_link/v5/6744095745774424946/6822308958202075636?sub4=oneatweb" class="cta-btn vp-bg">Đăng Ký Ngay</a>
     </div>
 
     <div class="card">
         <div class="card-top">
             <div class="brand-text lt-color">LOTTE Finance</div>
-            <div class="badge" style="background: #fdeaea; color: #da291c;">Lãi Suất Thấp</div>
+            <div class="badge" style="background: #fdeaea; color: var(--lotte);">Lãi Suất Thấp</div>
         </div>
         <div class="grid-info">
             <div class="info-box"><span>Hạn mức</span><strong>10 - 100 Triệu</strong></div>
-            <div class="info-box"><span>Lãi suất</span><strong>1.67%/tháng</strong></div>
+            <div class="info-box"><span>Lãi suất từ</span><strong>1.67%/tháng</strong></div>
         </div>
         <ul class="feature-list">
-            <li>Hồ sơ chỉ cần CCCD gắn chip</li>
-            <li>Tặng bảo hiểm khoản vay lên đến 2 triệu</li>
-            <li>Hỗ trợ khách hàng có thu nhập từ lương</li>
+            <li>Thủ tục đơn giản chỉ cần CCCD</li>
+            <li>Miễn phí tư vấn và làm hồ sơ</li>
+            <li>Hỗ trợ khách hàng có BHXH hoặc BHYT</li>
         </ul>
-        <a href="https://go.isclix.com/deep_link/v6/6744095745774424946/6586832341367096506?sub4=oneatweb&utm_source=xsdp&utm_medium=banner&utm_campaign=LotteFinance&url_enc=aHR0cHM6Ly92YXkubG90dGVmaW5hbmNlLnZuL3ZheW5oYW5oMy8%3D" class="cta-btn lt-bg">Nhận Ưu Đãi</a>
+        <a href="https://go.isclix.com/deep_link/v6/6744095745774424946/6586832341367096506?sub4=oneatweb" class="cta-btn lt-bg">Nhận Ưu Đãi</a>
     </div>
 
     <div class="card">
         <div class="card-top">
             <div class="brand-text fe-color">FE CREDIT</div>
-            <div class="badge" style="background: #edf8ee; color: #4db848;">Duyệt Dễ Nhất</div>
+            <div class="badge" style="background: #edf8ee; color: var(--fe);">Duyệt Dễ Nhất</div>
         </div>
         <div class="grid-info">
             <div class="info-box"><span>Khoản vay</span><strong>10 - 70 Triệu</strong></div>
             <div class="info-box"><span>Giải ngân</span><strong>Trong 24 Giờ</strong></div>
         </div>
         <ul class="feature-list">
-            <li>Hỗ trợ khách hàng chưa có lịch sử tín dụng</li>
-            <li>Tỷ lệ duyệt hồ sơ lên đến 90%</li>
-            <li>Thanh toán linh hoạt qua ví Momo, Viettel Money</li>
+            <li>Hỗ trợ khách hàng thu nhập từ 3 triệu</li>
+            <li>Tỷ lệ duyệt cao cho khách hàng mới</li>
+            <li>Hỗ trợ thanh toán linh hoạt hàng tháng</li>
         </ul>
-        <a href="https://go.isclix.com/deep_link/v5/6744095745774424946/6528872927410958011?sub4=oneatweb&url_enc=aHR0cHM6Ly92YXkuZmVjcmVkaXQuY29tLnZuLw%3D%3D" class="cta-btn fe-bg">Vay Tiền Ngay</a>
+        <a href="https://go.isclix.com/deep_link/v5/6744095745774424946/6528872927410958011?sub4=oneatweb" class="cta-btn fe-bg">Vay Tiền Ngay</a>
     </div>
 
     <div class="faq-section">
         <h2 class="faq-title">Câu hỏi thường gặp</h2>
         
         <div class="faq-item">
-            <button class="faq-question">Vay online có mất phí làm hồ sơ không? <span>+</span></button>
-            <div class="faq-answer">Tất cả các nhãn hàng trên đều miễn phí hoàn toàn phí tư vấn và phí làm hồ sơ. Bạn chỉ phải đóng lãi và gốc khi khoản vay đã được giải ngân.</div>
+            <button class="faq-question">Tôi có phải mất phí làm hồ sơ không? <span>+</span></button>
+            <div class="faq-answer">Hoàn toàn KHÔNG. Các đối tác ngân hàng trên đều miễn phí tư vấn và làm hồ sơ vay. Bạn không nên nộp bất kỳ khoản phí nào trước khi nhận tiền.</div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">Nợ xấu có đăng ký vay được không? <span>+</span></button>
-            <div class="faq-answer">Nếu bạn có nợ xấu nhóm 1 hoặc nhóm 2 (chậm thanh toán dưới 90 ngày), FE Credit hoặc VPBank vẫn có thể xem xét hỗ trợ dựa trên thu nhập hiện tại.</div>
+            <button class="faq-question">Nợ xấu có vay được không? <span>+</span></button>
+            <div class="faq-answer">Các ngân hàng ưu tiên khách hàng có lịch sử tín dụng tốt. Tuy nhiên, nếu bạn có nợ chú ý nhẹ (Nhóm 1, 2), FE Credit vẫn có những gói hỗ trợ riêng.</div>
         </div>
 
         <div class="faq-item">
-            <button class="faq-question">Bao lâu thì nhận được tiền? <span>+</span></button>
-            <div class="faq-answer">Với VPBank, hệ thống duyệt tự động chỉ mất 5-30 phút. Các công ty tài chính khác thường giải ngân trong vòng 24 giờ làm việc.</div>
+            <button class="faq-question">Bao lâu thì tôi nhận được tiền? <span>+</span></button>
+            <div class="faq-answer">VPBank duyệt tự động chỉ mất 5-30 phút. Lotte Finance và FE Credit thường giải ngân trong ngày sau khi hồ sơ được duyệt thành công.</div>
         </div>
     </div>
+
+    <footer class="footer-legal">
+        <div class="footer-info">
+            <strong>Thông tin minh bạch:</strong> Chúng tôi là nền tảng so sánh tài chính độc lập. Khoản vay được cung cấp bởi các tổ chức tín dụng uy tín (VPBank, Lotte Finance, FE Credit). 
+            Thời gian vay tối thiểu 6 tháng - tối đa 60 tháng. Lãi suất vay (APR) tối đa không vượt quá 35%/năm tùy theo điểm tín dụng của khách hàng. 
+            <br><br>
+            <strong>Ví dụ mô phỏng:</strong> Vay 20.000.000 VNĐ trong 12 tháng, lãi suất 1.6%/tháng. Gốc lãi hàng tháng ~1.842.000 VNĐ. Tổng số tiền thanh toán cuối kỳ là 22.104.000 VNĐ.
+        </div>
+
+        <div class="footer-contact">Hỗ trợ kết nối tài chính toàn quốc 24/7</div>
+        <div class="footer-info" style="text-align: center;">
+            Địa chỉ: 77 Tran Nhan Ton, Lottery Tower, An Dong, Ho Chi Minh City, Vietnam<br>
+            Email: marketing@msdigital.vn
+        </div>
+
+        <div class="trust-badges">
+            <span>🔒 SSL SECURE</span>
+            <span>🛡️ PRIVACY POLICY</span>
+            <span>✔️ VERIFIED</span>
+        </div>
+
+        <div class="copyright">© 2025 MS DIGITAL. ALL RIGHTS RESERVED.</div>
+    </footer>
 </div>
 
 <script>
+    // FAQ Toggle Script
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
